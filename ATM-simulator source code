@@ -1,18 +1,16 @@
 ATM-simulator project source code using cpp 
 
-#include <iostream> // Required for input/output operations
-#include <limits> // Required for numeric_limits
-
-using namespace std; // Use the standard namespace
-
+#include <iostream> 
+#include <limits> 
+using namespace std; 
 int main () {
-    float balance = 1000.00; // Initial account balance
-    int choice; // User's menu choice
-    float amount; // Amount for withdrawal or deposit
+    float balance = 1000.00; 
+    int choice; 
+    float amount; 
 
     cout << "Welcome to the Simple ATM Simulator!" << endl;
 
-    while (true) { // Loop indefinitely until the user chooses to exit
+    while (true) { 
         cout << "\n--- ATM Menu ---" << endl;
         cout << "1. Check Balance" << endl;
         cout << "2. Withdraw" << endl;
@@ -20,11 +18,11 @@ int main () {
         cout << "4. Exit" << endl;
         cout << "Enter your choice: ";
 
-        // Input validation for choice
+        
         while (!(cin >> choice)) {
             cout << "Invalid input. Please enter a number (1-4): ";
-            cin. clear (); // Clear the error flag
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            cin. clear (); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
         }
 
         switch (choice) {
